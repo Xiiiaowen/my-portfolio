@@ -1,0 +1,9 @@
+# Environment variables — keep out of version control
+.env
+
+# Local config with real secrets/IDs (use config.example.js as template)
+config.js
+
+# OS files
+.DS_Store
+Thumbs.db
