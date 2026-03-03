@@ -4,10 +4,6 @@
 # Local config with real secrets/IDs (use config.example.js as template)
 config.js
 
-# Photos and CV — kept local only
-photos/
-*.pdf
-
 # OS files
 .DS_Store
 Thumbs.db
