@@ -150,7 +150,7 @@ animateEls.forEach((el) => {
 // ============================================================
 (function () {
   const SESSION_KEY = 'xw_visited';
-  const API_BASE    = 'https://api.counterapi.dev/v1/xiiiaowen/portfolio-visits';
+  const API_BASE    = 'https://api.counterapi.dev/v1/xiiiaowen/portfolio-visits/';
 
   function ordinal(n) {
     const s = ['th', 'st', 'nd', 'rd'];
