@@ -145,36 +145,36 @@ animateEls.forEach((el) => {
 
 // ============================================================
 // VISITOR COUNTER
-// Uses localStorage to persist a count across browser sessions.
-// Each unique browser session (sessionStorage) increments once.
-//
-// NOTE: This is a per-browser counter — every visitor on their
-// own device starts from SEED and accumulates locally.
-// For a real shared counter, replace with a free service like
-// https://api.countapi.xyz or https://countapi.xyz
+// Real shared counter via CounterAPI — increments once per
+// browser session, shared across all visitors/devices.
 // ============================================================
 (function () {
-  const SEED        = 100;          // Friendly starting number
-  const COUNT_KEY   = 'xw_visit_count';
   const SESSION_KEY = 'xw_visited';
+  const API_BASE    = 'https://api.counterapi.dev/v1/xiiiaowen/portfolio-visits';
 
-  // Read stored count, fall back to seed
-  let count = parseInt(localStorage.getItem(COUNT_KEY) || SEED, 10);
-
-  // Only increment once per browser session
-  if (!sessionStorage.getItem(SESSION_KEY)) {
-    count += 1;
-    localStorage.setItem(COUNT_KEY, count);
-    sessionStorage.setItem(SESSION_KEY, '1');
-  }
-
-  // Display with ordinal suffix (1st, 2nd, 3rd, 108th …)
   function ordinal(n) {
     const s = ['th', 'st', 'nd', 'rd'];
     const v = n % 100;
     return n + (s[(v - 20) % 10] || s[v] || s[0]);
   }
 
-  const el = document.getElementById('visitor-count');
-  if (el) el.textContent = ordinal(count);
+  function display(count) {
+    const el = document.getElementById('visitor-count');
+    if (el) el.textContent = ordinal(count);
+  }
+
+  if (!sessionStorage.getItem(SESSION_KEY)) {
+    // First visit this session — increment the shared counter
+    sessionStorage.setItem(SESSION_KEY, '1');
+    fetch(`${API_BASE}/up`)
+      .then(r => r.json())
+      .then(data => display(data.count))
+      .catch(() => display('?'));
+  } else {
+    // Already counted this session — just read current value
+    fetch(`${API_BASE}`)
+      .then(r => r.json())
+      .then(data => display(data.count))
+      .catch(() => display('?'));
+  }
 })();
