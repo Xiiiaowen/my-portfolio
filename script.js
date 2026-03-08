@@ -150,7 +150,8 @@ animateEls.forEach((el) => {
 // ============================================================
 (function () {
   const SESSION_KEY = 'xw_visited';
-  const API_BASE    = 'https://api.counterapi.dev/v1/xiiiaowen/portfolio-visits/';
+  const API_READ = 'https://api.counterapi.dev/v1/xiiiaowen/portfolio-visits/';
+  const API_UP   = 'https://api.counterapi.dev/v1/xiiiaowen/portfolio-visits/up';
 
   function ordinal(n) {
     const s = ['th', 'st', 'nd', 'rd'];
@@ -166,13 +167,13 @@ animateEls.forEach((el) => {
   if (!sessionStorage.getItem(SESSION_KEY)) {
     // First visit this session — increment the shared counter
     sessionStorage.setItem(SESSION_KEY, '1');
-    fetch(`${API_BASE}/up`)
+    fetch(API_UP)
       .then(r => r.json())
       .then(data => display(data.count))
       .catch(() => display('?'));
   } else {
     // Already counted this session — just read current value
-    fetch(`${API_BASE}`)
+    fetch(API_READ)
       .then(r => r.json())
       .then(data => display(data.count))
       .catch(() => display('?'));
