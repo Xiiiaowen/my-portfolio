@@ -293,10 +293,12 @@
           <h3>Annual Report Q&amp;A</h3>
           <p>A RAG app that answers natural-language questions about company annual reports
              with page-level citations. Pre-loaded with Apple and HSBC 2025 reports.
-             Built from scratch without LangChain — chunking, embedding, vector retrieval,
-             and grounded answer generation implemented directly.</p>
+             Built from scratch without LangChain — streaming responses, conversation history,
+             smart multi-document comparison retrieval, and table-aware PDF extraction
+             implemented directly. Answers are grounded in retrieved passages; the LLM
+             cannot fabricate facts outside the documents.</p>
           <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>RAG</span><span>ChromaDB</span><span>OpenAI Embeddings</span><span>pdfplumber</span>
+            <span>Python</span><span>Streamlit</span><span>RAG</span><span>ChromaDB</span><span>OpenAI Embeddings</span><span>GPT-4o-mini</span><span>pdfplumber</span>
           </div>
           <div class="project-links">
             <a href="https://github.com/Xiiiaowen/annual-report-rag" target="_blank" rel="noopener">GitHub →</a>
