@@ -755,7 +755,7 @@ footer {
 
   .hero-actions { justify-content: center; }
 
-  .hero-desc { text-align: left; }
+  .hero-desc { text-align: justify; }
 
   .about-grid {
     grid-template-columns: 1fr;
