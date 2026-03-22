@@ -13,9 +13,9 @@
     <div class="nav-logo">XS</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button id="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
@@ -85,6 +85,109 @@
     </div>
   </section>
 
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects">
+    <div class="section-inner">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Personal and learning projects exploring AI, data, and automation.</p>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-icon">🏦</div>
+          <h3>AI Credit Assessor</h3>
+          <p>An AI-powered credit risk tool combining XGBoost, SHAP explainability, and GPT-4o-mini — the kind a bank's credit team would actually use. Features include per-applicant SHAP factor breakdown, What-If sensitivity analysis, counterfactual Approval Path (minimum changes to reduce risk), batch CSV scoring, and PDF report export. Finance-standard metrics: ROC-AUC 0.806, Gini 0.612, KS 0.488.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Streamlit</span><span>XGBoost</span><span>SHAP</span><span>GPT-4o-mini</span><span>scikit-learn</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xiiiaowen/credit-ai-assessor" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://8mwpw2yoicmfimgsqla2ku.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <img src="photos/stock-analyst logo.png" alt="XW Stock Analyst logo" class="project-screenshot" />
+          <h3>XW Stock Analyst</h3>
+          <p>Full-stack financial analysis tool — fundamental, technical, and Elliott Wave analysis
+             with an AI-powered narrative (Claude API). Includes a personal portfolio tracker with
+             P&amp;L, stop-loss, and buy/hold/sell recommendations.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Streamlit</span><span>yfinance</span><span>Plotly</span><span>SQLite</span><span>Claude API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xiiiaowen/stock-analyst" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://stock-analyst-fstzmqjc4snrkk6tdcd8mr.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🤖</div>
+          <h3>MDM Agent</h3>
+          <p>A real AI agent for B2B customer data quality — the agentic upgrade of Customer MDM.
+             GPT-4o-mini autonomously decides which tools to call per record: web search,
+             phone/email validation, or human escalation. Handles cross-language deduplication
+             (Chinese ↔ English) and caches search results to minimise API costs.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Streamlit</span><span>GPT-4o-mini</span><span>Agentic AI</span><span>Tavily API</span><span>GLEIF LEI</span><span>rapidfuzz</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xiiiaowen/mdm-agent" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://mdm-agent-bmigye54nhlhrgmm9pkvlp.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">📄</div>
+          <h3>Annual Report Q&amp;A</h3>
+          <p>A RAG app that answers natural-language questions about company annual reports
+             with page-level citations. Pre-loaded with Apple and HSBC 2025 reports.
+             Built from scratch without LangChain — streaming responses, conversation history,
+             smart multi-document comparison retrieval, and table-aware PDF extraction
+             implemented directly. Answers are grounded in retrieved passages; the LLM
+             cannot fabricate facts outside the documents.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Streamlit</span><span>RAG</span><span>ChromaDB</span><span>OpenAI Embeddings</span><span>GPT-4o-mini</span><span>pdfplumber</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xiiiaowen/annual-report-rag" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://annual-report-rag-l8aogwvfxwzneatnebkguj.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">📰</div>
+          <h3>Sentiment Signal</h3>
+          <p>Financial news sentiment pipeline powered by FinBERT — a finance-specific transformer model.
+             Fetches live headlines for any ticker via yfinance, scores each with FinBERT
+             (Positive / Negative / Neutral), and visualises the sentiment signal alongside price data
+             in a 3-tab Streamlit dashboard. No API keys required; results cached to disk.</p>
+          <div class="project-tags">
+            <span>Python</span><span>Streamlit</span><span>FinBERT</span><span>HuggingFace</span><span>yfinance</span><span>Plotly</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xiiiaowen/sentiment-signal" target="_blank" rel="noopener">GitHub →</a>
+            <a href="https://sentiment-signal-fn7gokguwqbgfuhjvgrrg6.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🌐</div>
+          <h3>This Portfolio Website</h3>
+          <p>Built this site from scratch using plain HTML, CSS, and JavaScript —
+             no frameworks. A hands-on introduction to front-end development
+             and web deployment.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Xiiiaowen/my-portfolio" target="_blank" rel="noopener">GitHub →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ========== EXPERIENCE ========== -->
   <section id="experience">
     <div class="section-inner">
@@ -100,10 +203,10 @@
               <span class="timeline-company">Accenture · Frankfurt</span>
             </div>
             <p>
-              Building and maintaining financial models for enterprise clients, supporting over 20 large-scale projects 
-              while ensuring compliance with US GAAP and company policies. Leveraging simulation-based analysis, 
+              Building and maintaining financial models for enterprise clients, supporting over 20 large-scale projects
+              while ensuring compliance with US GAAP and company policies. Leveraging simulation-based analysis,
               delivering actionable insights through analysis and dashboards.
-              Collaborated with cross-functional teams including sales and legal to align deal structures with business goals, 
+              Collaborated with cross-functional teams including sales and legal to align deal structures with business goals,
               contributing to a 15% increase in profitability and 30% greater reporting efficiency through automated financial analytics.
             </p>
             <div class="timeline-tags">
@@ -178,174 +281,54 @@
   <section id="skills">
     <div class="section-inner">
       <h2 class="section-title">Skills &amp; Tools</h2>
-      <div class="skills-grid">
+      <div class="skills-compact">
 
-        <div class="skill-category">
-          <h3>Data &amp; ML</h3>
-          <ul>
-            <li><span class="skill-tag">Python</span></li>
-            <li><span class="skill-tag">Pandas</span></li>
-            <li><span class="skill-tag">NumPy</span></li>
-            <li><span class="skill-tag">Scikit-learn</span></li>
-            <li><span class="skill-tag">Statsmodels</span></li>
-            <li><span class="skill-tag">SQL</span></li>
-            <li><span class="skill-tag">MATLAB</span></li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <h3>Finance &amp; Quant</h3>
-          <ul>
-            <li><span class="skill-tag">Risk Pricing</span></li>
-            <li><span class="skill-tag">Monte Carlo</span></li>
-            <li><span class="skill-tag">Backtesting</span></li>
-            <li><span class="skill-tag">Feature Engineering</span></li>
-            <li><span class="skill-tag">Model Evaluation</span></li>
-            <li><span class="skill-tag">FRM (II)</span></li>
-            <li><span class="skill-tag">CFA (I)</span></li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <h3>Cloud &amp; Visualisation</h3>
-          <ul>
-            <li><span class="skill-tag">Azure Data Factory</span></li>
-            <li><span class="skill-tag">Databricks</span></li>
-            <li><span class="skill-tag">Power BI</span></li>
-            <li><span class="skill-tag">Tableau</span></li>
-            <li><span class="skill-tag">Matplotlib</span></li>
-          </ul>
-        </div>
-
-        <div class="skill-category">
-          <h3>AI &amp; Languages</h3>
-          <ul>
-            <li><span class="skill-tag">Prompt Engineering</span></li>
-            <li><span class="skill-tag">Agentic AI</span></li>
-            <li><span class="skill-tag">Claude API</span></li>
-            <li><span class="skill-tag">English (C2)</span></li>
-            <li><span class="skill-tag">German (B2)</span></li>
-            <li><span class="skill-tag">Italian (B1)</span></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PROJECTS ========== -->
-  <section id="projects">
-    <div class="section-inner">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-subtitle">Personal and learning projects exploring AI, data, and automation.</p>
-      <div class="projects-grid">
-
-        <div class="project-card">
-          <img src="photos/stock-analyst logo.png" alt="XW Stock Analyst logo" class="project-screenshot" />
-          <h3>XW Stock Analyst</h3>
-          <p>Full-stack financial analysis tool — fundamental, technical, and Elliott Wave analysis
-             with an AI-powered narrative (Claude API). Includes a personal portfolio tracker with
-             P&amp;L, stop-loss, and buy/hold/sell recommendations.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>yfinance</span><span>Plotly</span><span>SQLite</span><span>Claude API</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Xiiiaowen/stock-analyst" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://stock-analyst-fstzmqjc4snrkk6tdcd8mr.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+        <div class="skill-row">
+          <span class="skill-label">Data &amp; ML</span>
+          <div class="skill-tags-wrap">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">Statsmodels</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">MATLAB</span>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-icon">🗂️</div>
-          <h3>Customer Master Data Management</h3>
-          <p>LLM-enhanced B2B data quality pipeline with a Streamlit UI. Handles
-             messy multilingual records — including Chinese ↔ English company name
-             standardisation — with fuzzy deduplication verified by GPT-4o-mini,
-             Tavily web enrichment, and an enrichment cache to eliminate repeat
-             API costs on subsequent runs.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>GPT-4o-mini</span><span>Tavily API</span><span>LangChain</span><span>Pandas</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Xiiiaowen/customer-mdm" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://customer-mdm-ezmqxp7urxa63zvtzp5yvc.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+        <div class="skill-row">
+          <span class="skill-label">Finance &amp; Quant</span>
+          <div class="skill-tags-wrap">
+            <span class="skill-tag">Risk Pricing</span>
+            <span class="skill-tag">Monte Carlo</span>
+            <span class="skill-tag">Backtesting</span>
+            <span class="skill-tag">Feature Engineering</span>
+            <span class="skill-tag">Model Evaluation</span>
+            <span class="skill-tag">FRM (II)</span>
+            <span class="skill-tag">CFA (I)</span>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-icon">🤖</div>
-          <h3>MDM Agent</h3>
-          <p>A real AI agent for B2B customer data quality — the agentic upgrade of Customer MDM.
-             GPT-4o-mini autonomously decides which tools to call per record: web search,
-             phone/email validation, or human escalation. Handles cross-language deduplication
-             (Chinese ↔ English) and caches search results to minimise API costs.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>GPT-4o-mini</span><span>Agentic AI</span><span>Tavily API</span><span>GLEIF LEI</span><span>rapidfuzz</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Xiiiaowen/mdm-agent" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://mdm-agent-bmigye54nhlhrgmm9pkvlp.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
+        <div class="skill-row">
+          <span class="skill-label">Cloud &amp; Viz</span>
+          <div class="skill-tags-wrap">
+            <span class="skill-tag">Azure Data Factory</span>
+            <span class="skill-tag">Databricks</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Matplotlib</span>
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-icon">🏦</div>
-          <h3>AI Credit Assessor</h3>
-          <p>An AI-powered credit risk tool combining XGBoost, SHAP explainability, and GPT-4o-mini — the kind a bank's credit team would actually use. Features include per-applicant SHAP factor breakdown, What-If sensitivity analysis, counterfactual Approval Path (minimum changes to reduce risk), batch CSV scoring, and PDF report export. Finance-standard metrics: ROC-AUC 0.806, Gini 0.612, KS 0.488.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>XGBoost</span><span>SHAP</span><span>GPT-4o-mini</span><span>scikit-learn</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Xiiiaowen/credit-ai-assessor" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://8mwpw2yoicmfimgsqla2ku.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-icon">📄</div>
-          <h3>Annual Report Q&amp;A</h3>
-          <p>A RAG app that answers natural-language questions about company annual reports
-             with page-level citations. Pre-loaded with Apple and HSBC 2025 reports.
-             Built from scratch without LangChain — streaming responses, conversation history,
-             smart multi-document comparison retrieval, and table-aware PDF extraction
-             implemented directly. Answers are grounded in retrieved passages; the LLM
-             cannot fabricate facts outside the documents.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>RAG</span><span>ChromaDB</span><span>OpenAI Embeddings</span><span>GPT-4o-mini</span><span>pdfplumber</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Xiiiaowen/annual-report-rag" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://annual-report-rag-l8aogwvfxwzneatnebkguj.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-icon">📰</div>
-          <h3>Market Sentiment Analyser</h3>
-          <p>Financial news sentiment pipeline powered by FinBERT — a finance-specific transformer model.
-             Fetches live headlines for any ticker via yfinance, scores each with FinBERT
-             (Positive / Negative / Neutral), and visualises the sentiment signal alongside price data
-             in a 3-tab Streamlit dashboard. No API keys required; results cached to disk.</p>
-          <div class="project-tags">
-            <span>Python</span><span>Streamlit</span><span>FinBERT</span><span>HuggingFace</span><span>yfinance</span><span>Plotly</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Xiiiaowen/sentiment-signal" target="_blank" rel="noopener">GitHub →</a>
-            <a href="https://sentiment-signal-fn7gokguwqbgfuhjvgrrg6.streamlit.app/" target="_blank" rel="noopener">Live Demo →</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-icon">🌐</div>
-          <h3>This Portfolio Website</h3>
-          <p>Built this site from scratch using plain HTML, CSS, and JavaScript —
-             no frameworks. A hands-on introduction to front-end development
-             and web deployment.</p>
-          <div class="project-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/Xiiiaowen/my-portfolio" target="_blank" rel="noopener">GitHub →</a>
+        <div class="skill-row">
+          <span class="skill-label">AI &amp; Languages</span>
+          <div class="skill-tags-wrap">
+            <span class="skill-tag">Prompt Engineering</span>
+            <span class="skill-tag">Agentic AI</span>
+            <span class="skill-tag">Claude API</span>
+            <span class="skill-tag">English (C2)</span>
+            <span class="skill-tag">German (B2)</span>
+            <span class="skill-tag">Italian (B1)</span>
           </div>
         </div>
 

@@ -360,6 +360,41 @@ section:nth-child(even) {
 }
 
 /* ============================================================
+   SKILLS — compact row layout
+   ============================================================ */
+.skills-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 14px 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.skill-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  min-width: 120px;
+  padding-top: 3px;
+}
+
+.skill-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ============================================================
    PROJECTS
    ============================================================ */
 .projects-grid {
