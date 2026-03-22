@@ -18,6 +18,9 @@
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="nav-hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
     <button id="theme-toggle" aria-label="Toggle dark/light mode">🌙</button>
   </nav>
 
@@ -65,9 +68,7 @@
             of domain expertise and intelligent systems.
           </p>
           <p>
-            I speak English (C2), German (B2), and Italian (B1) — and I hold
-            certifications in FRM (II), CFA (I), Google Data Analytics,
-            Udacity Data Scientist, AI Trading, and Agentic AI.
+            I speak English (C2), German (B2), and Italian (B1).
           </p>
         </div>
         <div class="about-links">
@@ -80,6 +81,18 @@
           <a href="Xiaowen Shou CV.pdf" class="profile-link" download>
             <span class="link-icon">📄</span> Download CV
           </a>
+        </div>
+      </div>
+
+      <div class="certs-row">
+        <span class="certs-label">Certifications</span>
+        <div class="skill-tags-wrap">
+          <span class="skill-tag">FRM II</span>
+          <span class="skill-tag">CFA I</span>
+          <span class="skill-tag">Google Data Analytics</span>
+          <span class="skill-tag">Udacity Data Scientist</span>
+          <span class="skill-tag">Udacity AI Trading</span>
+          <span class="skill-tag">Udacity Agentic AI</span>
         </div>
       </div>
 
@@ -104,13 +117,13 @@
   <section id="projects">
     <div class="section-inner">
       <h2 class="section-title">Projects</h2>
-      <p class="section-subtitle">Personal and learning projects exploring AI, data, and automation.</p>
+      <p class="section-subtitle">Applied AI &amp; data projects — all deployed and live.</p>
       <div class="projects-grid">
 
         <div class="project-card">
           <div class="project-icon">🏦</div>
           <h3>AI Credit Assessor</h3>
-          <p>An AI-powered credit risk tool combining XGBoost, SHAP explainability, and GPT-4o-mini — the kind a bank's credit team would actually use. Features include per-applicant SHAP factor breakdown, What-If sensitivity analysis, counterfactual Approval Path (minimum changes to reduce risk), batch CSV scoring, and PDF report export. Finance-standard metrics: ROC-AUC 0.806, Gini 0.612, KS 0.488.</p>
+          <p>XGBoost + SHAP credit risk model with a GPT-4o-mini narrative — the kind a bank's credit team would actually use. Per-applicant factor breakdown, What-If analysis, counterfactual Approval Path, and PDF report export. Finance-standard metrics: ROC-AUC 0.806, Gini 0.612, KS 0.488.</p>
           <div class="project-tags">
             <span>Python</span><span>Streamlit</span><span>XGBoost</span><span>SHAP</span><span>GPT-4o-mini</span><span>scikit-learn</span>
           </div>
@@ -154,12 +167,10 @@
         <div class="project-card">
           <div class="project-icon">📄</div>
           <h3>Annual Report Q&amp;A</h3>
-          <p>A RAG app that answers natural-language questions about company annual reports
-             with page-level citations. Pre-loaded with Apple and HSBC 2025 reports.
-             Built from scratch without LangChain — streaming responses, conversation history,
-             smart multi-document comparison retrieval, and table-aware PDF extraction
-             implemented directly. Answers are grounded in retrieved passages; the LLM
-             cannot fabricate facts outside the documents.</p>
+          <p>RAG app for natural-language Q&amp;A on company annual reports with page-level citations.
+             Pre-loaded with Apple and HSBC 2025 reports. Built from scratch without LangChain —
+             streaming responses, conversation history, and table-aware PDF extraction.
+             Grounded answers; the LLM cannot fabricate facts outside the documents.</p>
           <div class="project-tags">
             <span>Python</span><span>Streamlit</span><span>RAG</span><span>ChromaDB</span><span>OpenAI Embeddings</span><span>GPT-4o-mini</span><span>pdfplumber</span>
           </div>
@@ -336,11 +347,17 @@
         </div>
 
         <div class="skill-row">
-          <span class="skill-label">AI &amp; Languages</span>
+          <span class="skill-label">AI</span>
           <div class="skill-tags-wrap">
             <span class="skill-tag">Prompt Engineering</span>
             <span class="skill-tag">Agentic AI</span>
             <span class="skill-tag">Claude API</span>
+          </div>
+        </div>
+
+        <div class="skill-row">
+          <span class="skill-label">Languages</span>
+          <div class="skill-tags-wrap">
             <span class="skill-tag">English (C2)</span>
             <span class="skill-tag">German (B2)</span>
             <span class="skill-tag">Italian (B1)</span>

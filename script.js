@@ -46,6 +46,21 @@ sections.forEach((s) => observer.observe(s));
 
 
 // ============================================================
+// HAMBURGER MENU
+// ============================================================
+const hamburger = document.getElementById('nav-hamburger');
+const navLinks  = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+
+// ============================================================
 // CONTACT FORM — sends to sxwzdzq@gmail.com via Formspree
 //
 // TO ACTIVATE:

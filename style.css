@@ -360,6 +360,50 @@ section:nth-child(even) {
 }
 
 /* ============================================================
+   HAMBURGER
+   ============================================================ */
+#nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+#nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ============================================================
+   CERTIFICATIONS ROW
+   ============================================================ */
+.certs-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.certs-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  padding-top: 4px;
+  min-width: 100px;
+}
+
+/* ============================================================
    NOW BLOCK
    ============================================================ */
 .now-block {
@@ -744,7 +788,23 @@ footer {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  #nav-hamburger { display: flex; }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 64px;
+    left: 0; right: 0;
+    background: var(--nav-bg);
+    backdrop-filter: blur(10px);
+    padding: 20px 32px 28px;
+    border-bottom: 1px solid var(--border);
+    gap: 18px;
+    z-index: 99;
+  }
+
+  .nav-links.open { display: flex; }
 
   #hero {
     flex-direction: column-reverse;
@@ -756,6 +816,7 @@ footer {
   .hero-actions { justify-content: center; }
 
   .hero-desc { text-align: justify; }
+  .about-text p { text-align: justify; }
 
   .about-grid {
     grid-template-columns: 1fr;
