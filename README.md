@@ -25,7 +25,7 @@ portfolio/
 ├── config.example.js    # Template for local config (commit this)
 ├── config.js            # Real config with API keys — gitignored, do not commit
 ├── photos/              # Profile photo, project logos, screenshots
-└── Xiaowen Shou CV.pdf  # Downloadable CV
+└── Xiaowen Shou Lebenslauf.pdf  # Downloadable CV
 ```
 
 ## Contact Form Setup
