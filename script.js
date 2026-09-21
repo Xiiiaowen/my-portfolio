@@ -61,11 +61,11 @@ navLinks.querySelectorAll('a').forEach(a => {
 
 
 // ============================================================
-// CONTACT FORM — sends to sxwzdzq@gmail.com via Formspree
+// CONTACT FORM — sends to xiaowen.shou98@gmail.com via Formspree
 //
 // TO ACTIVATE:
 //   1. Go to https://formspree.io and sign up (free)
-//   2. Click "New Form", link it to sxwzdzq@gmail.com
+//   2. Click "New Form", link it to xiaowen.shou98@gmail.com
 //   3. Copy your Form ID (looks like: xabcdefg)
 //   4. Replace YOUR_FORM_ID below with that ID
 // ============================================================
@@ -116,7 +116,7 @@ form.addEventListener('submit', async (e) => {
       showFormStatus(msg, 'error');
     }
   } catch {
-    showFormStatus('Network error. Please email me directly at sxwzdzq@gmail.com', 'error');
+    showFormStatus('Network error. Please email me directly at xiaowen.shou98@gmail.com', 'error');
   } finally {
     submitBtn.disabled    = false;
     submitBtn.textContent = 'Send Message';
